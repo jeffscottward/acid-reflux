@@ -1,0 +1,40 @@
+@keyframes loadingspinner {
+  0%   { transform: rotate(0deg); }
+  15%  { transform: rotate(0deg); }
+  21%  { transform: rotate(90deg); }
+  36%  { transform: rotate(90deg); }
+  42%  { transform: rotate(180deg); }
+  57%  { transform: rotate(180deg); }
+  63%  { transform: rotate(270deg); }
+  78%  { transform: rotate(270deg); }
+  84%  { transform: rotate(360deg); }
+  100% { transform: rotate(360deg); }
+}
+  
+.loadingspinner {
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 50% 50% 50% 50%;
+  background-clip: padding-box;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-content: center;
+}
+
+.loadingspinner div {
+  box-sizing: border-box;
+  width: 200px;
+  height: 200px;
+  border-top: 50px #218DA6 solid;
+  border-right: 50px #595551 solid;
+  border-bottom: 50px #FF9719 solid;
+  border-left: 50px #A0CC00 solid;
+  background-color: #fff;
+  margin: auto;
+  
+  border-radius: 50%;
+  background-clip: content-box;
+  
+  animation: loadingspinner 4s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+}

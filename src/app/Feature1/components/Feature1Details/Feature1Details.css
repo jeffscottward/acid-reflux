@@ -1,0 +1,6 @@
+.feature1-details-main {
+	max-width: 1200px;
+	.panel-header-title {
+		flex: 1;
+	}
+}

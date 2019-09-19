@@ -1,0 +1,82 @@
+.app-header, 
+.app-title {
+	font-weight: 100;
+	font-family: 'Roboto', sans-serif;
+}
+
+.app-header {
+	display: flex;
+	flex-direction: row;
+	flex: 0 0 60px;
+	color: var(--primaryColor);
+	color: white;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 10px;
+	align-content: flex-start;
+
+	.app-search-box {
+		flex: 0 0 350px;
+		margin: auto auto auto 20px; 
+		position: relative;
+
+		&::after {
+			display: inline-block;
+			position: absolute;
+			top: 22.5%;
+			left: 102.5%;
+			content: 'Use: Ctrl+Space';
+			color: #777;
+			font-size: .8em;
+			width: 150px;
+		}
+
+		input {
+			background: #333;
+			border: 1px solid #666;
+			padding: 5px 5px 5px 10px;
+			position: relative;
+			width: 100%;
+
+			&:focus {
+				outline-style: none;
+			}
+		}
+
+		&.halo-visible{
+			input {
+				outline-style: auto;
+				outline-width: 5px;
+				outline-color: white;
+			}
+		}
+		
+		.typeahead-selector {
+			position: absolute;
+			z-index: 99999999999999999999;
+			left: 0;
+			top: 100%;
+			width: 100%;
+			background: #333;
+		  outline-style: none;
+		  border-left: 1px solid #666;
+		  border-right: 1px solid #666;
+		  border-bottom: 1px solid #666;
+
+			li {
+				border-bottom: 1px solid #666;	
+				padding: 5px 5px 5px 10px;
+
+				a {
+					color: white;
+					text-decoration: none;
+				}
+
+				&.hover,
+				&:hover {
+					background: #666;
+				}
+			}
+		}
+	}
+}
